@@ -1,0 +1,12 @@
+@use "../utils/fonts" as f;
+@use "../utils/colors" as c; 
+
+:root{
+    font-family: f.$roboto;
+}
+
+a{
+    text-decoration: none;
+}
+
+
