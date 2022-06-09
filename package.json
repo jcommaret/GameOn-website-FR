@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcommaret/ohmyfood.git"
+    "url": "git+https://github.com/jcommaret/gameon-website-fr.git"
   },
   "author": "Jérôme Commaret",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jcommaret/ohmyfood/issues"
+    "url": "https://github.com/jcommaret/gameon-website-fr/issues"
   },
-  "homepage": "https://github.com/jcommaret/ohmyfood#readme"
+  "homepage": "https://github.com/jcommaret/gameon-website-fr#readme"
 }
