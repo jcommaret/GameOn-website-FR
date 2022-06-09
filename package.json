@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass/main.scss:css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcommaret/ohmyfood.git"
+  },
+  "author": "Jérôme Commaret",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcommaret/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/jcommaret/ohmyfood#readme"
+}

@@ -1,5 +1,5 @@
 // DOM Elements
-const modalbg = document.querySelector(".bground");
+const modalbg = document.querySelector(".modal-overflow");
 const modalBtn = document.querySelectorAll(".modal-btn");
 
 // launch modal event
