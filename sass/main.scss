@@ -5,5 +5,11 @@
 /* Pages */
 @use "pages/index";
 
+@use "layout/common/header";
+  
+@use "layout/common/footer-section";
+@use "layout/hero-section";
 @use "components/btn";
+@use "components/checkbox";
+
 @use "animations/modal";

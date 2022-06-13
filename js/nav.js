@@ -1,8 +1,8 @@
-function editNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
+function toogleMenu() {
+  var x = document.getElementById("menu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
   } else {
-    x.className = "topnav";
+    x.style.display = "block";
   }
 }
