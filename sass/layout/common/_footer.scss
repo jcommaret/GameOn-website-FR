@@ -1,0 +1,10 @@
+@use "../../utils/colors" as c;
+@use "../../utils/fonts" as f; 
+@use "../../utils/mixins" as m; 
+
+footer{
+  margin-top:66px;
+  color: c.$red;
+  padding-left: 20px;
+  padding-right: 20px;
+}
