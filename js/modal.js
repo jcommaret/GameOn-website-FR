@@ -1,6 +1,6 @@
 // DOM Elements
 const modalbg = document.querySelector(".modal-overflow");
-const modalBtn = document.querySelectorAll(".modal-btn");
+const modalBtn = document.querySelectorAll(".btn-hero");
 
 // launch modal event
 modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
