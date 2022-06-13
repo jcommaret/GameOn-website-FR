@@ -1,4 +1,13 @@
+@use "../utils/colors" as c;
+
 .btn{
-  background: #fe142f;
-  border-radius: 5px;
+  &-hero{
+    margin-left: 53px;
+    border:none;
+    background: c.$red;
+    color:c.$white;
+    padding:12px 9px 12px 9px;
+    border-radius: 5px;
+  }
+  
 }
