@@ -1,0 +1,15 @@
+@use "../../utils/mixins" as m;
+@use "../../utils/colors" as c;
+
+.nav{
+  &-icon{
+    display:block;
+    position: fixed;
+    right: 30px;
+    top: 38px;
+    color: c.$red-icon;
+    @include m.desktop{
+      display: none;
+    }
+  }
+}

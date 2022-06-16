@@ -1,13 +1,10 @@
-// DOM Elements
-const modalbg = document.querySelector(".modal-overflow");
-const modalBtn = document.querySelectorAll(".btn-hero");
+// Dom elements
+const modalBtn = document.querySelector(".btn-hero");
+const modal = document.querySelector(".modal-container");
 
-// launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-
-// launch modal form
+// Wait for click on modalBtn to launchModal
+modalBtn.addEventListener("click", launchModal);
+// When modal is launching, change style to display block 
 function launchModal() {
-  modalbg.style.display = "block";
+  modal.style.display = "block";
 }
-
-

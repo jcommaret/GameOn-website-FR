@@ -1,13 +1,21 @@
-@use "../utils/colors" as c;
+@use "../utils/colors.scss" as c;
+@use "../utils/fonts.scss" as f;
+
 
 .btn{
+  background: c.$red;
+  border: none;
+  color:c.$white;
+  font-family: f.$dm-sans;
   &-hero{
-    margin-left: 53px;
-    border:none;
-    background: c.$red;
-    color:c.$white;
-    padding:12px 9px 12px 9px;
+    padding:11px 30px 11px 30px;
+    width:199px;
+    height:55px;
+    font-size:25px;
+    line-height: 32px;
     border-radius: 5px;
   }
-  
+  &:hover{
+    background: c.$blue;
+  }
 }
