@@ -1,6 +1,20 @@
 @use "../utils/colors.scss" as c;
 @use "../utils/fonts.scss" as f;
+@use "../utils/mixins" as m;
 
+
+.btn-tab-desk{
+  display: none;
+  @include m.tablet{
+    display: block;
+  }
+}
+
+.btn-mobile-only{
+  @include m.tablet{
+    display: none;
+  }
+}
 
 .btn{
   background: c.$red;
@@ -8,6 +22,14 @@
   color:c.$white;
   font-family: f.$dm-sans;
   &-hero{
+    padding:11px 30px 11px 30px;
+    width:199px;
+    height:55px;
+    font-size:25px;
+    line-height: 32px;
+    border-radius: 5px;
+  }
+  &-submit{
     padding:11px 30px 11px 30px;
     width:199px;
     height:55px;

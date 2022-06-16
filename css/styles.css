@@ -68,7 +68,6 @@ main {
   margin-top: 80px;
   padding-left: 30px;
   padding-right: 30px;
-  height: 80vh;
   font-weight: bolder;
   color: black;
   border-radius: 8px;
@@ -194,23 +193,20 @@ footer {
 }
 
 .hero {
-  background-image: url("../../img/background.jpg");
-  background-position-y: top 300px;
-  background-color: #232323;
   border-radius: 8px;
-  gap: 72px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.2509803922);
-  padding: 56px 0px 70px 53px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 100%;
+}
+.hero img {
+  width: 100%;
 }
 @media screen and (min-width: 992px) {
   .hero {
-    background-image: url("../../img/background.jpg");
-    background-position: right 0px;
+    background-color: #232323;
+  }
+}
+@media screen and (min-width: 992px) {
+  .hero {
     background-color: #232323;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -219,8 +215,6 @@ footer {
     flex-direction: column;
     box-shadow: 0px 12px 12px 0px rgba(0, 0, 0, 0.2509803922);
     padding: 56px 0px 70px 53px;
-    background-size: contain;
-    background-position-y: 0%;
   }
 }
 .hero-headline {
@@ -256,6 +250,21 @@ footer {
   }
 }
 
+.btn-tab-desk {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .btn-tab-desk {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn-mobile-only {
+    display: none;
+  }
+}
+
 .btn {
   background: #FE142F;
   border: none;
@@ -263,6 +272,14 @@ footer {
   font-family: "DM Sans", sans-serif;
 }
 .btn-hero {
+  padding: 11px 30px 11px 30px;
+  width: 199px;
+  height: 55px;
+  font-size: 25px;
+  line-height: 32px;
+  border-radius: 5px;
+}
+.btn-submit {
   padding: 11px 30px 11px 30px;
   width: 199px;
   height: 55px;

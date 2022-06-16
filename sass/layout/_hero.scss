@@ -3,21 +3,16 @@
 @use "../utils/fonts" as f;
 
 .hero{
-  background-image: url("../../img/background.jpg");
-  background-position-y: top 300px;
-  background-color: c.$grey;
   border-radius: 8px;
-  gap: 72px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0px 12px 12px 0px #00000040;
-  padding:56px 0px 70px 53px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 100%;
+  img{
+    width:100%;
+  }
   @include m.desktop{
-    background-image: url("../../img/background.jpg");
-    background-position: right 0px;
+    background-color: c.$grey;
+  }
+  @include m.desktop{
     background-color: c.$grey;
     background-repeat: no-repeat;
     border-radius: 8px;
@@ -26,8 +21,6 @@
     flex-direction: column;
     box-shadow: 0px 12px 12px 0px #00000040;
     padding:56px 0px 70px 53px;
-    background-size: contain;
-    background-position-y: 0%;
   }
   &-headline{
     color: c.$black;
@@ -56,6 +49,5 @@
       line-height: 31px;
       color: c.$white;
     }
-
   }
 }
