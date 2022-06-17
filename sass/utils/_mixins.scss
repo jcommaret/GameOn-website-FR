@@ -1,13 +1,19 @@
 @use "breakpoints" as b;
 
-@mixin tablet {
-    @media screen and (min-width: map-get(b.$breakpoints, tablet)){
+@mixin m540 {
+    @media screen and (max-width: map-get(b.$breakpoints, max-540)){
         @content;
     }
 }
 
-@mixin desktop{
-    @media screen and (min-width: map-get(b.$breakpoints, desktop)){
+@mixin m768 {
+    @media screen and (max-width: map-get(b.$breakpoints, max-768)){
+        @content;
+    }
+}
+
+@mixin m800 {
+    @media screen and (max-width: map-get(b.$breakpoints, max-800)){
         @content;
     }
 }

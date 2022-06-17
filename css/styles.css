@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900");
 @import url("https://fonts.googleapis.com/css?family=DM+Sans");
-:root {
-  --modal-duration: 0.8s;
-  font-family: "DM Sans", sans-serif;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,10 +26,155 @@ img {
   padding-right: 1rem;
 }
 
+.topnav {
+  overflow: hidden;
+  margin: 3.5%;
+}
+.topnav-header-logo {
+  float: left;
+}
+.topnav-main-navbar {
+  float: right;
+}
+.topnav-header-logo {
+  float: left;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+a {
+  float: left;
+  display: block;
+  color: #000;
+  text-align: center;
+  padding: 12px 12px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Roboto", serif;
+}
+a:hover, a .active {
+  background-color: #ff0000;
+  color: #FFF;
+  border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 540px) {
+  .topnav a {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin-top: -15px;
+  }
+}
+main {
+  font-size: 130%;
+  font-weight: bolder;
+  color: #000;
+  padding-top: 0.5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin: 1px 20px 15px;
+  border-radius: 2rem;
+  text-align: justify;
+}
+
+.modal-btn {
+  font-size: 145%;
+  background: #fe142f;
+  display: flex;
+  margin: auto;
+  padding: 2em;
+  color: #fff;
+  padding: 0.75rem 2.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  background: #3876ac;
+}
+
 .footer {
   margin: 20px;
   padding: 10px;
   font-family: "DM Sans", sans-serif;
+}
+
+/* Modal form */
+.button {
+  background: #fe142f;
+  margin-top: 0.5em;
+  padding: 1em;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.button:hover {
+  background: #3876ac;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
+.content {
+  margin: 5% auto;
+  width: 100%;
+  max-width: 500px;
+  animation-name: modalopen;
+  animation-duration: 0.8s;
+  background: #232323;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.modal-body {
+  padding: 15px 8%;
+  margin: 15px auto;
 }
 
 label {
@@ -47,7 +187,7 @@ label {
 
 input {
   padding: 8px;
-  border: 0.8px solid #CCC;
+  border: 0.8px solid #ccc;
   outline: none;
 }
 
@@ -152,8 +292,8 @@ input[data-error]::after {
   border-radius: 2px;
   background: transparent;
   border: 2px solid transparent;
-  border-bottom-color: #FFF;
-  border-left-color: #FFF;
+  border-bottom-color: #fff;
+  border-left-color: #fff;
   transform: rotate(-55deg);
   left: 21%;
   top: 19%;
@@ -177,7 +317,7 @@ input[data-error]::after {
   content: " ";
   height: 33px;
   width: 3px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .close:before {
@@ -190,13 +330,13 @@ input[data-error]::after {
 
 .btn-submit,
 .btn-signup {
-  background: #FE142F;
+  background: #fe142f;
   display: block;
   margin: 0 auto;
   border-radius: 7px;
   font-size: 1rem;
   padding: 12px 82px;
-  color: #FFF;
+  color: #fff;
   cursor: pointer;
   border: 0;
 }
@@ -204,7 +344,7 @@ input[data-error]::after {
 /* custom select styles */
 .custom-select {
   position: relative;
-  font-family: Arial;
+  font-family: "Arial";
   font-size: 1.1rem;
   font-weight: normal;
 }
@@ -214,7 +354,7 @@ input[data-error]::after {
 }
 
 .select-selected {
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 /* Style the arrow inside the select element: */
@@ -252,7 +392,7 @@ input[data-error]::after {
 /* Style items (options): */
 .select-items {
   position: absolute;
-  background-color: #FFF;
+  background-color: #fff;
   top: 89%;
   left: 0;
   right: 0;
@@ -289,7 +429,7 @@ input[data-error]::after {
   padding: 51px 67px;
   grid-column: span 4;
   background: #232323;
-  color: #FFF;
+  color: #fff;
   position: relative;
   text-align: left;
   min-width: 424px;
@@ -337,7 +477,7 @@ input[data-error]::after {
 }
 
 .hero-img img {
-  min-width: 100%;
+  width: 100%;
   height: 100%;
   display: block;
   padding: 0;
@@ -368,7 +508,7 @@ footer {
   }
 
   .hero-content {
-    background: #FFF;
+    background: #fff;
     color: #000;
     padding: 20px;
   }
@@ -416,164 +556,5 @@ footer {
     opacity: 1;
   }
 }
-main {
-  font-size: 130%;
-  font-weight: bolder;
-  color: #000;
-  padding-top: 0.5vw;
-  padding-left: 2vw;
-  padding-right: 2vw;
-  margin: 1px 20px 15px;
-  border-radius: 2rem;
-  text-align: justify;
-}
-
-.footer {
-  font-family: "DM Sans", sans-serif;
-  margin: 20px;
-  padding: 10px;
-}
-
-.topnav {
-  overflow: hidden;
-  margin: 3.5%;
-}
-
-.header-logo {
-  float: left;
-}
-
-.main-navbar {
-  float: right;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #000000;
-  text-align: center;
-  padding: 12px 12px;
-  margin: 5px;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: Roboto, sans-serif;
-}
-
-.topnav a:hover {
-  background-color: #ff0000;
-  color: #ffffff;
-  border-radius: 15px;
-}
-
-.topnav a.active {
-  background-color: #ff0000;
-  color: #ffffff;
-  border-radius: 15px;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 768px) {
-  .topnav a {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-@media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
-  }
-
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-}
-.button {
-  background: #FE142F;
-  margin-top: 0.5em;
-  padding: 1em;
-  color: #FFF;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.button:hover {
-  background: #3876ac;
-}
-
-.modal-btn {
-  font-size: 145%;
-  background: #FE142F;
-  display: flex;
-  margin: auto;
-  padding: 2em;
-  color: #FFF;
-  padding: 0.75rem 2.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-
-.modal-btn:hover {
-  background: #3876ac;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  background-color: rgba(26, 39, 156, 0.4);
-}
-
-.content {
-  margin: 5% auto;
-  width: 100%;
-  max-width: 500px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
-  background: #232323;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  color: #FFF;
-  padding-top: 10px;
-}
-
-.modal-body {
-  padding: 15px 8%;
-  margin: 15px auto;
-}
-
-/* Base */
-/* Pages */
 
 /*# sourceMappingURL=styles.css.map */

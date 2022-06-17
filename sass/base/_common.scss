@@ -1,9 +1,6 @@
 @use "../utils/fonts" as f;
-
-:root {
-  --modal-duration: 0.8s;
-  font-family : f.$dm-sans;
-}
+@use "../utils/colors" as c;
+@use "../utils/mixins" as m;
 
 * {
   box-sizing: border-box;

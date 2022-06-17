@@ -1,8 +1,9 @@
-$tablet:768px;
-$desktop:992px;
+$w-540:540px;
+$w-768:768px;
+$w-800:800px;
 
 $breakpoints: (
-  tablet: $tablet,
-  desktop: $desktop,
+  max-540: $w-540,
+  max-768: $w-768,
+  max-800: $w-800,
 );
-
