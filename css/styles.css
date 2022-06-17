@@ -39,12 +39,10 @@ img {
 .topnav-header-logo {
   float: left;
 }
-
 .topnav .icon {
   display: none;
 }
-
-a {
+.topnav a {
   float: left;
   display: block;
   color: #000;
@@ -55,49 +53,41 @@ a {
   font-size: 20px;
   font-family: "Roboto", serif;
 }
-a:hover, a .active {
-  background-color: #ff0000;
-  color: #FFF;
-  border-radius: 15px;
-}
-
 @media screen and (max-width: 768px) {
   .topnav a {
     display: none;
   }
-
   .topnav a.icon {
     float: right;
     display: block;
-  }
-
-  .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
   }
 }
 @media screen and (max-width: 540px) {
   .topnav a {
     display: none;
   }
-
-  .topnav a.icon {
-    float: right;
+}
+.topnav a:hover, .topnav a .active {
+  background-color: #ff0000;
+  color: #FFF;
+  border-radius: 15px;
+}
+@media screen and (max-width: 768px) {
+  .topnav.mobile {
+    position: relative;
+  }
+  .topnav.mobile a {
+    float: none;
     display: block;
-    margin-top: -15px;
+    text-align: left;
+  }
+  .topnav.mobile .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
+
 main {
   font-size: 130%;
   font-weight: bolder;

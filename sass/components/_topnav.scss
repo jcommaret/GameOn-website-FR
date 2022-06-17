@@ -14,56 +14,49 @@
   &-header-logo {
     float: left;
   }
-
-}
-
-.topnav {
-    .icon{
-      display: none;
-    }
+  .icon{
+    display: none;
   }
   a{
-  float: left;
-  display: block;
-  color: c.$black;
-  text-align: center;
-  padding: 12px 12px;
-  margin: 5px;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: f.$roboto;
-  &:hover,.active{
-    background-color: c.$topnav-red;
-    color: c.$white;
-    border-radius: 15px;
+    float: left;
+    display: block;
+    color: c.$black;
+    text-align: center;
+    padding: 12px 12px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: f.$roboto;
+    @include m.m768{
+      display:none;
+      &.icon{
+        float: right;
+        display: block;
+      }
+
+    }
+    @include m.m540{
+      display: none;
+    }
+    &:hover,.active{
+      background-color: c.$topnav-red;
+      color: c.$white;
+      border-radius: 15px;
+    }
+  }
+  @include m.m768{
+    &.mobile {
+      position: relative;
+      a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
   }
 }
-
-
-@include m.m768 {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
-@include m.m540 {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-    margin-top: -15px;
-  }
-} 
