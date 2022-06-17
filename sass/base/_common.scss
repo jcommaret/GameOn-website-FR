@@ -1,33 +1,32 @@
 @use "../utils/fonts" as f;
 
 :root {
-    --font-default: f.$dm-sans;
-    --font-slab: f.$dm-sans;
-    --modal-duration: 0.8s;
+  --modal-duration: 0.8s;
+  font-family : f.$dm-sans;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 /* Landing Page */
 
 body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    font-family: f.$dm-sans;
-    font-size: 18px;
-    max-width: 1300px;
-    margin: 0 auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: f.$dm-sans;
+  font-size: 18px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 p {
-    margin-bottom: 0;
-    padding: 0.5vw;
+  margin-bottom: 0;
+  padding: 0.5vw;
 }
 
 img {
-    padding-right: 1rem;
+  padding-right: 1rem;
 }

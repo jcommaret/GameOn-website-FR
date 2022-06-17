@@ -3,3 +3,10 @@
 
 /* Pages */
 @use "pages/index";
+
+@use "layout/main";
+@use "layout/common/footer.scss";
+
+@use "components/nav";
+@use "components/buttons";
+@use "components/modal";
