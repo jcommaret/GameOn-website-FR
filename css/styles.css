@@ -58,6 +58,22 @@ main {
     opacity: 1;
   }
 }
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .footer {
   margin: 20px;
   padding: 10px;
@@ -247,15 +263,31 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
-  .topnav.mobile {
+  .topnav {
     position: relative;
+  }
+  .topnav .topnav-main-navbar {
+    display: none;
+  }
+
+  .topnav > .topnav-main-navbar {
+    display: none;
+    animation-name: hide;
+    animation-duration: 1s;
+  }
+
+  .topnav.mobile .topnav-main-navbar {
+    display: block;
+    animation-name: show;
+    animation-duration: 1s;
+    margin-right: 45px;
   }
 
   .topnav.mobile .icon {
     position: absolute;
     right: 0;
     top: 0;
-    color: #FFF;
+    color: red;
   }
 
   .topnav.mobile a {

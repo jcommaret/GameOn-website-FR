@@ -64,13 +64,32 @@
 }
 
 @include m.m768 {
-  .topnav.mobile {position: relative;}
+  .topnav {
+		position: relative;
+		.topnav-main-navbar {
+			display:none;
+		}
+	}
+	.topnav>.topnav-main-navbar{
+		display:none;
+		animation-name:hide;
+		animation-duration:1s;
+	}
+
+	.topnav.mobile .topnav-main-navbar{
+		display: block;
+		animation-name: show;
+		animation-duration: 1s;
+		margin-right: 45px;
+	}
+
   .topnav.mobile .icon {
     position: absolute;
     right: 0;
     top: 0;
-		color: c.$white;
+		color: red;
   }
+	
   .topnav.mobile a {
     float: none;
     display: block;
