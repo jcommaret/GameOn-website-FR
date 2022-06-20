@@ -1,5 +1,6 @@
+const x = document.getElementById("myTopnav");
+  
 function Nav() {
-  var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " mobile";
   } else {
