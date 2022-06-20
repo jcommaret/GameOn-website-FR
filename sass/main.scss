@@ -1,4 +1,13 @@
+
 @use "base/common";
-@use "components/_topnav";
 
 @use "pages/index";
+
+@use "animations/a-modal";
+
+@use "layout/footer";
+@use "layout/hero";
+@use "layout/topnav";
+
+@use "components/buttons";
+@use "components/modal";

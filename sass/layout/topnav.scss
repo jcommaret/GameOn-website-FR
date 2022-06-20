@@ -1,0 +1,60 @@
+@use "../utils/fonts" as f;
+@use "../utils/colors" as c;
+@use "../utils/mixins" as m;
+
+
+.topnav {
+	overflow: hidden;
+	margin: 3.5%;
+	a {
+		float: left;
+		display: block;
+		color: c.$black;
+		text-align: center;
+		padding: 12px 12px;
+		margin: 5px;
+		text-decoration: none;
+		font-size: 20px;
+		font-family: f.$roboto;
+		&:hover {
+			background-color: c.$topnav-red;
+			color: c.$white;
+			border-radius: 15px;
+		}
+	}
+	a.active {
+		background-color: c.$topnav-red;
+		color: c.$white;
+		border-radius: 15px;
+	}
+	.icon {
+		display: none;
+	}
+}
+.topnav-header-logo {
+	float: left;
+}
+.topnav-main-navbar {
+	float: right;
+}
+
+@include m.m540 {
+	.topnav {
+		a {
+			display: none;
+		}
+		a.icon {
+			float: right;
+			display: block;
+			margin-top: -15px;
+		}
+	}
+}
+
+@include m.m768 {
+  .topnav a {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}

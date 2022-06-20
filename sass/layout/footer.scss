@@ -1,0 +1,29 @@
+@use "../utils/fonts" as f;
+@use "../utils/colors" as c;
+@use "../utils/mixins" as m;
+
+.footer {
+	margin: 20px;
+	padding: 10px;
+	font-family: f.$dm-sans;
+}
+.copyrights {
+	color: c.$red;
+	padding: 0;
+	font-size: 1rem;
+	margin: 60px 0 30px;
+	font-weight: bolder;
+}
+footer {
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin: 0 20px;
+}
+
+@include m.m800{
+  .copyrights {
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
