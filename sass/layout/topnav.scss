@@ -20,6 +20,9 @@
 			background-color: c.$topnav-red;
 			color: c.$white;
 			border-radius: 15px;
+			&.icon{
+				color: c.$white;		
+			}
 		}
 	}
 	a.active {
@@ -44,9 +47,9 @@
 			display: none;
 		}
 		a.icon {
+			color:c.$red;
 			float: right;
 			display: block;
-			margin-top: -15px;
 		}
 	}
 }
@@ -54,7 +57,24 @@
 @include m.m768 {
   .topnav a {display: none;}
   .topnav a.icon {
+		color:c.$red;
     float: right;
     display: block;
+  }
+}
+
+@include m.m768 {
+  .topnav.mobile {position: relative;}
+  .topnav.mobile .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+		color: c.$white;
+  }
+  .topnav.mobile a {
+    float: none;
+    display: block;
+    text-align: left;
+		color:c.$white;
   }
 }
