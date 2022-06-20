@@ -2,30 +2,56 @@
 @use "../utils/colors" as c;
 @use "../utils/mixins" as m;
 
-.button {
-	background: #fe142f;
-	margin-top: 0.5em;
-	padding: 1em;
+.btn{
+	background : c.$red;
 	color: c.$white;
-	border-radius: 15px;
 	cursor: pointer;
-	font-size: 16px;
 	&:hover {
-		background: #3876ac;
+		background: c.$blue;
+	}
+	&-submit {
+		border: 0;
+		padding: 1em;
+		border-radius: 15px;
+		font-size: 16px;
+	}
+	&-signup {
+		margin: 0 auto;
+		margin-top: 59px;	
+		border-radius: 7px;
+		font-size: 1rem;
+		border: 0;
+		text-transform: capitalize;
+		font-size: 1.3rem;
+		padding: 15px 23px;
+	}
+	&-close {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		width: 32px;
+		height: 32px;
+		opacity: 1;
+		cursor: pointer;
+		transform: scale(0.7);
+		&:before {
+			position: absolute;
+			left: 15px;
+			content: " ";
+			height: 33px;
+			width: 3px;
+			background-color: c.$white;
+			transform: rotate(45deg);
+		}
+		&:after {
+			position: absolute;
+			left: 15px;
+			content: " ";
+			height: 33px;
+			width: 3px;
+			background-color: c.$white;
+			transform: rotate(-45deg);
+		}
 	}
 }
 
-.modal-btn {
-	font-size: 145%;
-	background: #fe142f;
-	display: flex;
-	margin: auto;
-	padding: 2em;
-	color: c.$white;
-	padding: 0.75rem 2.5rem;
-	border-radius: 1rem;
-	cursor: pointer;
-	&:hover {
-		background: #3876ac;
-	}
-}

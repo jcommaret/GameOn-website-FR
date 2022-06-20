@@ -296,32 +296,57 @@ footer {
     text-align: left;
   }
 }
-.button {
-  background: #fe142f;
-  margin-top: 0.5em;
-  padding: 1em;
+.btn {
+  background: #FE142F;
   color: #FFF;
-  border-radius: 15px;
   cursor: pointer;
+}
+.btn:hover {
+  background: #3876ac;
+}
+.btn-submit {
+  border: 0;
+  padding: 1em;
+  border-radius: 15px;
   font-size: 16px;
 }
-.button:hover {
-  background: #3876ac;
+.btn-signup {
+  margin: 0 auto;
+  margin-top: 59px;
+  border-radius: 7px;
+  font-size: 1rem;
+  border: 0;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  padding: 15px 23px;
 }
-
-.modal-btn {
-  font-size: 145%;
-  background: #fe142f;
-  display: flex;
-  margin: auto;
-  padding: 2em;
-  color: #FFF;
-  padding: 0.75rem 2.5rem;
-  border-radius: 1rem;
+.btn-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 32px;
+  height: 32px;
+  opacity: 1;
   cursor: pointer;
+  transform: scale(0.7);
 }
-.modal-btn:hover {
-  background: #3876ac;
+.btn-close:before {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #FFF;
+  transform: rotate(45deg);
+}
+.btn-close:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 3px;
+  background-color: #FFF;
+  transform: rotate(-45deg);
 }
 
 .modal {
@@ -338,7 +363,6 @@ footer {
 .modal.open {
   display: block;
 }
-
 .modal-content {
   margin: 5% auto;
   width: 100%;
@@ -352,7 +376,6 @@ footer {
   color: #FFF;
   padding-top: 10px;
 }
-
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
@@ -368,7 +391,7 @@ label {
 
 input {
   padding: 8px;
-  border: 0.8px solid #ccc;
+  border: 0.8px solid #CCC;
   outline: none;
 }
 
@@ -495,65 +518,6 @@ input {
 }
 .checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
   opacity: 1;
-}
-
-.modal-close {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  width: 32px;
-  height: 32px;
-  opacity: 1;
-  cursor: pointer;
-  transform: scale(0.7);
-}
-.modal-close:before {
-  position: absolute;
-  left: 15px;
-  content: " ";
-  height: 33px;
-  width: 3px;
-  background-color: #FFF;
-  transform: rotate(45deg);
-}
-.modal-close:after {
-  position: absolute;
-  left: 15px;
-  content: " ";
-  height: 33px;
-  width: 3px;
-  background-color: #FFF;
-  transform: rotate(-45deg);
-}
-
-.btn-submit {
-  background: #fe142f;
-  display: block;
-  margin: 0 auto;
-  border-radius: 7px;
-  font-size: 1rem;
-  padding: 12px 82px;
-  color: #FFF;
-  cursor: pointer;
-  border: 0;
-}
-
-.btn-signup {
-  background: #fe142f;
-  display: block;
-  margin: 0 auto;
-  border-radius: 7px;
-  font-size: 1rem;
-  padding: 12px 82px;
-  color: #FFF;
-  cursor: pointer;
-  border: 0;
-  outline: none;
-  text-transform: capitalize;
-  font-size: 1.3rem;
-  padding: 15px 23px;
-  margin: 0;
-  margin-top: 59px;
 }
 
 .custom-select {
