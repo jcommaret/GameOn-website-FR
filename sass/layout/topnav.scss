@@ -12,7 +12,7 @@
 			display:none;
 		}
 	}
-	a {	
+	a {
 		float: left;
 		display: block;
 		color: c.$black;
@@ -27,11 +27,6 @@
 		}
 		@include m.m768{
 			display:none;
-		}
-		&.icon{
-			color: c.$red;
-    	float: right;
-    	display: block;
 		}
 		&:hover {
 			background-color: c.$topnav-red;
@@ -66,30 +61,37 @@
 			display:none;
 		}
 	}
-	@include m.m768{
-		>.topnav-main-navbar{
-			display:none;
-			animation-name:hide;
-			animation-duration:1s;
-		}
-		&.mobile{
-			.topnav-main-navbar{
-				display: block;
-				animation-name: show;
-				animation-duration: 1s;
-				margin-right: 45px;		
-			}
-			.icon{
-				position: absolute;
-				right: 0;
-				top: 0;
-				color: red;
-			}
-			a{
-				float: none;
-    		display: block;
-    		text-align: left;
-			}
-		}
-	}	
+	
+}
+
+@include m.m768 {
+  .topnav a.icon {
+		color: c.$red;
+    float: right;
+    display: block;
+  }
+	.topnav>.topnav-main-navbar{
+		display:none;
+		animation-name:hide;
+		animation-duration:1s;
+	}
+	.topnav.mobile .topnav-main-navbar{
+		display: block;
+		animation-name: show;
+		animation-duration: 1s;
+		margin-right: 45px;
+	}
+
+  .topnav.mobile .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+		color: red;
+  }
+	
+  .topnav.mobile a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }
