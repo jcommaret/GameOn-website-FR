@@ -188,70 +188,7 @@ input {
 		}
 	}
 }
-.custom-select {
-	position: relative;
-	font-family: f.$arial;
-	font-size: 1.1rem;
-	font-weight: normal;
-	select {
-		display: none;
-	}
-}
-.select-selected {
-	background-color: c.$white;
-	color: c.$black;
-	padding: 11px 16px;
-	border: 1px solid transparent;
-	border-color: c.$color-dark;
-	cursor: pointer;
-	border-radius: 8px;
-	height: 48px;
-	&:after {
-		position: absolute;
-		content: "";
-		top: 10px;
-		right: 13px;
-		width: 11px;
-		height: 11px;
-		border: 3px solid transparent;
-		border-bottom-color: c.$red-border;
-		border-left-color: c.$red-border;
-		transform: rotate(-48deg);
-		border-radius: 5px 0 5px 0;
-	}
-}
-.select-selected.select-arrow-active {
-	&:after {
-		transform: rotate(135deg);
-		top: 13px;
-	}
-}
-.select-items {
-	div {
-		color: c.$black;
-		padding: 11px 16px;
-		border: 1px solid transparent;
-		border-color: c.$color-dark;
-		cursor: pointer;
-		border-radius: 8px;
-		height: 48px;
-		&:hover {
-			background-color: c.$color-dark;
-		}
-	}
-	position: absolute;
-	background-color: c.$white;
-	top: 89%;
-	left: 0;
-	right: 0;
-	z-index: 99;
-}
-.select-hide {
-	display: none;
-}
-.same-as-selected {
-	background-color: c.$color-dark;
-}
+
 .text-label {
 	font-weight: normal;
 	font-size: 16px;
