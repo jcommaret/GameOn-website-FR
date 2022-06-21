@@ -63,28 +63,7 @@ input {
 	font-size: 20px;
 	height: 48px;
 }
-.formData[data-error] {
-	&::after {
-		content: attr(data-error);
-		font-size: 0.4em;
-		color: c.$red-form;
-		display: block;
-		margin-top: 7px;
-		margin-bottom: 7px;
-		text-align: right;
-		line-height: 0.3;
-		opacity: 0;
-		transition: 0.3s;
-	}
-}
-.formData[data-error-visible="true"] {
-	&::after {
-		opacity: 1;
-	}
-	.text-control {
-		border: 2px solid c.$red-form;
-	}
-}
+
 .checkbox-label {
 	position: relative;
 	margin-left: 36px;
@@ -192,4 +171,21 @@ input {
 .text-label {
 	font-weight: normal;
 	font-size: 16px;
+}
+
+.success{ 
+	input{
+		border:3px solid c.$background-green;
+	}
+	small{
+		color:c.$background-green;
+	}
+}
+.error{ 
+	input{
+		border:3px solid c.$red;
+	}
+	small{
+		color:c.$red;	
+	}
 }
