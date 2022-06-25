@@ -21,3 +21,4 @@ document.addEventListener('keyup', function(event){
 		modal.className = "modal";
 	}
 });
+

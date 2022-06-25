@@ -147,8 +147,7 @@ form.addEventListener('submit', function (e) {
         isLastNameValid = checkLastName(),
         isDateValid = checkDate(),
         isQuantityValid = checkQty(),
-        isCheckboxValid = true,
-        isRadiosLocationValid = true;
+        isCheckboxValid = true;
         
     // Validation du formulaire    
     let isFormValid = 
@@ -157,12 +156,10 @@ form.addEventListener('submit', function (e) {
         isLastNameValid && 
         isDateValid &&
         isCheckboxValid &&
-        isRadiosLocationValid &&
         isQuantityValid;
     // si le formulaire est valide, envoie un log en console au submit. 
     if (isFormValid) {
-        console.log("Le formulaire est valide");
-        console.log(radiosLoc);
+        showThanks();   
     }
 });
 
@@ -181,7 +178,7 @@ const debounce = (fn, delay = 500) => {
     };
 };
 
-
+// 
 form.addEventListener('input', debounce(function (e) {
     switch (e.target.id) {
         case 'email':       checkEmail();
@@ -190,13 +187,20 @@ form.addEventListener('input', debounce(function (e) {
         case 'birthdate':   checkDate();
         case 'quantity':    checkQty();
         case 'checkbox1':   isCheckboxValid();
-        
-        case 'location1':   isRadiosLocationValid();
-        case 'location2':   isRadiosLocationValid();
-        case 'location3':   isRadiosLocationValid();
-        case 'location4':   isRadiosLocationValid();
-        case 'location5':   isRadiosLocationValid();
-        case 'location6':   isRadiosLocationValid();
     break;          
     }
 }));
+
+// Présente le message de remerciement.
+function showThanks() {
+    var thanks = document.getElementById("thanks");
+    var form = document.getElementById("signup");
+    if (thanks.style.display == '') {
+      thanks.style.display = 'block';
+      form.style.display = 'none';
+    }
+    else {
+      thanks.style.display = 'none';
+      form.style.display = 'block';
+    }
+};
