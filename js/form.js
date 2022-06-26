@@ -6,8 +6,14 @@ const lastEl = document.querySelector('#lastname');
 const emailEl = document.querySelector('#email');
 const quantityEl = document.querySelector('#quantity');
 const birthdateEl = document.querySelector('#birthdate');
-const radiosLocation = document.querySelectorAll('input[type="radio"]');
 const checkboxCGU = document.querySelector('#checkbox1');
+const radio1 = document.querySelector('#location1');
+const radio2 = document.querySelector('#location2');
+const radio3 = document.querySelector('#location3');
+const radio4 = document.querySelector('#location4');
+const radio5 = document.querySelector('#location5');
+const radio6 = document.querySelector('#location6');
+
 const checkboxNewsletter = document.querySelector('#checkbox2');
 // Check if required // 
 const isRequired = value => value === '' ? false : true;
@@ -120,6 +126,19 @@ const isCheckboxValid = () => {
     return valid;  
 };
 
+const isradiosValid = () => {
+    let valid = false;
+    if (radio1.checked | radio2.checked | radio3.checked | radio4.checked | radio5.checked | radio6.checked){
+        valid = true;    
+    }
+    else {
+        valid = false;
+        showError(radio1, 'Merci de selectionner une ville.')
+        console.log(radio1.checked, radio2.checked, radio3.checked, radio4.checked, radio5.checked, radio6.checked);
+    }
+    return valid;  
+};
+
 // Presente le message d'erreur
 const showError = (input, message) => {
     const formField = input.parentElement;
@@ -147,7 +166,8 @@ form.addEventListener('submit', function (e) {
         isLastNameValid = checkLastName(),
         isDateValid = checkDate(),
         isQuantityValid = checkQty(),
-        isCheckboxValid = true;
+        isCheckboxValid = true,
+        isradiosValid = true;
         
     // Validation du formulaire    
     let isFormValid = 
@@ -156,6 +176,7 @@ form.addEventListener('submit', function (e) {
         isLastNameValid && 
         isDateValid &&
         isCheckboxValid &&
+        isradiosValid &&
         isQuantityValid;
     // si le formulaire est valide, envoie un log en console au submit. 
     if (isFormValid) {
@@ -187,6 +208,7 @@ form.addEventListener('input', debounce(function (e) {
         case 'birthdate':   checkDate();
         case 'quantity':    checkQty();
         case 'checkbox1':   isCheckboxValid();
+        
     break;          
     }
 }));
