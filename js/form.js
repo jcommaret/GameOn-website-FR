@@ -126,15 +126,15 @@ const isCheckboxValid = () => {
     return valid;  
 };
 
+// check if radios is valid
 const isradiosValid = () => {
     let valid = false;
     if (radio1.checked | radio2.checked | radio3.checked | radio4.checked | radio5.checked | radio6.checked){
-        valid = true;    
+        valid = true;
     }
     else {
+        showError(radio1, 'Merci de selectionner une ville.');
         valid = false;
-        showError(radio1, 'Merci de selectionner une ville.')
-        console.log(radio1.checked, radio2.checked, radio3.checked, radio4.checked, radio5.checked, radio6.checked);
     }
     return valid;  
 };
@@ -184,23 +184,7 @@ form.addEventListener('submit', function (e) {
     }
 });
 
-// Debounce
-const debounce = (fn, delay = 500) => {
-    let timeoutId;
-    return (...args) => {
-        // cancel the previous timer
-        if (timeoutId) {
-            clearTimeout(timeoutId);
-        }
-        // setup a new timer
-        timeoutId = setTimeout(() => {
-            fn.apply(null, args)
-        }, delay);
-    };
-};
-
-// 
-form.addEventListener('input', debounce(function (e) {
+form.addEventListener('input',function (e) {
     switch (e.target.id) {
         case 'email':       checkEmail();
         case 'firstname':   checkFirstName();
@@ -208,11 +192,10 @@ form.addEventListener('input', debounce(function (e) {
         case 'birthdate':   checkDate();
         case 'quantity':    checkQty();
         case 'checkbox1':   isCheckboxValid();
-        
+        case 'location1':   isradiosValid();
     break;          
     }
-}));
-
+});
 // Présente le message de remerciement.
 function showThanks() {
     var thanks = document.getElementById("thanks");
