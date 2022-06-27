@@ -540,5 +540,20 @@ input {
 #thanks {
   display: none;
 }
+#thanks .thanks-modal {
+  display: flex;
+  margin-top: 50%;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 36px;
+}
+#thanks .thanks-modal .modal-toogle {
+  width: 200px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30vh;
+}
 
 /*# sourceMappingURL=styles.css.map */
