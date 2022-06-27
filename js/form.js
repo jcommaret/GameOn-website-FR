@@ -168,8 +168,8 @@ form.addEventListener('submit', function (e) {
         isLastNameValid = checkLastName(),
         isDateValid = checkDate(),
         isQuantityValid = checkQty(),
-        isCheckboxValid = true,
-        isradiosValid = true;
+        isCheckboxValid = isCheckboxValid(),
+        isradiosValid = isradiosValid();
         
     // Validation du formulaire    
     let isFormValid = 
@@ -213,7 +213,6 @@ form.addEventListener('input',function (e) {
         case 'location4' :
         case 'location5' : 
         case 'location6' : 
-        console.log(isradiosValid);
             isradiosValid();
             break;
         default : 
