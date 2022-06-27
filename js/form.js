@@ -132,6 +132,7 @@ let isradiosValid = () => {
     let valid = false;
     if (radio1.checked || radio2.checked || radio3.checked || radio4.checked || radio5.checked || radio6.checked){
         valid = true;
+        showSuccess(radio1);
     }
     else {
         showError(radio1, 'Merci de selectionner une ville.');
@@ -188,14 +189,35 @@ form.addEventListener('submit', function (e) {
 
 form.addEventListener('input',function (e) {
     switch (e.target.id) {
-        case 'email':       checkEmail();
-        case 'firstname':   checkFirstName();
-        case 'lastname':    checkLastName();
-        case 'birthdate':   checkDate();
-        case 'quantity':    checkQty();
-        case 'checkbox1':   isCheckboxValid();
-        case 'location1':   isradiosValid();
-    break;          
+        case 'email': 
+            checkEmail();
+            break;
+        case 'firstname' :   
+            checkFirstName();
+            break;
+        case 'lastname' :    
+            checkLastName();
+            break;
+        case 'birthdate':   
+            checkDate();
+            break;
+        case 'quantity' :    
+            checkQty();
+            break;
+        case 'checkbox1' :   
+            isCheckboxValid(); 
+            break;
+        case 'location1' :
+        case 'location2' : 
+        case 'location3' :
+        case 'location4' :
+        case 'location5' : 
+        case 'location6' : 
+        console.log(isradiosValid);
+            isradiosValid();
+            break;
+        default : 
+            break;          
     }
 });
 // Présente le message de remerciement.
