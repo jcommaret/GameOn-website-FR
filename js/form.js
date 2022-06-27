@@ -1,35 +1,35 @@
 /* form elements selector */
-const form = document.querySelector('#signup');
+let form = document.querySelector('#signup');
 
-const firstEl = document.querySelector('#firstname');
-const lastEl = document.querySelector('#lastname');
-const emailEl = document.querySelector('#email');
-const quantityEl = document.querySelector('#quantity');
-const birthdateEl = document.querySelector('#birthdate');
-const checkboxCGU = document.querySelector('#checkbox1');
-const radio1 = document.querySelector('#location1');
-const radio2 = document.querySelector('#location2');
-const radio3 = document.querySelector('#location3');
-const radio4 = document.querySelector('#location4');
-const radio5 = document.querySelector('#location5');
-const radio6 = document.querySelector('#location6');
+let firstEl = document.querySelector('#firstname');
+let lastEl = document.querySelector('#lastname');
+let emailEl = document.querySelector('#email');
+let quantityEl = document.querySelector('#quantity');
+let birthdateEl = document.querySelector('#birthdate');
+let checkboxCGU = document.querySelector('#checkbox1');
+let radio1 = document.querySelector('#location1');
+let radio2 = document.querySelector('#location2');
+let radio3 = document.querySelector('#location3');
+let radio4 = document.querySelector('#location4');
+let radio5 = document.querySelector('#location5');
+let radio6 = document.querySelector('#location6');
 
-const checkboxNewsletter = document.querySelector('#checkbox2');
+let checkboxNewsletter = document.querySelector('#checkbox2');
 // Check if required // 
-const isRequired = value => value === '' ? false : true;
+let isRequired = value => value === '' ? false : true;
 // FirstName
-const isFirstNameValid = (firstname) => {
-    const regex = /^(?=.{2,})/;
+let isFirstNameValid = (firstname) => {
+    let regex = /^(?=.{2,})/;
     return regex.test(firstname);
 };
 
-const checkFirstName = () => {
+let checkFirstName = () => {
     let valid = false;
-    const firstname = firstEl.value.trim();
+    let firstname = firstEl.value.trim();
     if (!isRequired(firstname)) {
-        showError(firstEl, 'Votre prénom ne doit pas être vide');
+        showError(firstEl, 'Votre prénom ne doit pas être vide.');
     } else if (!isFirstNameValid(firstname)) {
-        showError(firstEl, 'Votre prénom doit comporter 2 charactères au minimum')
+        showError(firstEl, 'Veuillez entrer 2 caractères ou plus pour le champ du prénom.')
     } else {
         showSuccess(firstEl);
     valid = true;
@@ -38,17 +38,17 @@ const checkFirstName = () => {
 };
 
 // Last Name
-const isLastNameValid = (lastname) => {
-  const regex = /^(?=.{2,})/;
+let isLastNameValid = (lastname) => {
+  let regex = /^(?=.{2,})/;
   return regex.test(lastname);
 };
-const checkLastName = () => {
+let checkLastName = () => {
   let valid = false;
-  const lastname = lastEl.value.trim();
+  let lastname = lastEl.value.trim();
   if (!isRequired(lastname)) {
-        showError(lastEl, 'Votre nom ne doit pas être vide');
+        showError(lastEl, 'Votre nom ne doit pas être vide.');
   } else if (!isLastNameValid(lastname)) {
-        showError(lastEl, 'Votre nom doit comporter 2 charactères au minimum')
+        showError(lastEl, 'Veuillez entrer 2 caractères ou plus pour le champ du nom.')
   } else {
         showSuccess(lastEl);
     valid = true;
@@ -57,13 +57,13 @@ const checkLastName = () => {
 };
 
 // Email
-const isEmailValid = (email) => {
-    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+let isEmailValid = (email) => {
+    let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return regex.test(email);
 };
-const checkEmail = () => {
+let checkEmail = () => {
     let valid = false;
-    const email = emailEl.value.trim();
+    let email = emailEl.value.trim();
     if (!isRequired(email)) {
         showError(emailEl, 'Votre email ne peut pas être vide.');
     } else if (!isEmailValid(email)) {
@@ -76,17 +76,17 @@ const checkEmail = () => {
 };
 
 // Date
-const isDateValid = (date) => {
-    const regex = /^\d{4}-\d{2}-\d{2}$/;
+let isDateValid = (date) => {
+    let regex = /^\d{4}-\d{2}-\d{2}$/;
     return regex.test(date);
 };
-const checkDate = () => {
+let checkDate = () => {
   let valid = false;
-  const birthdate = birthdateEl.value.trim();
+  let birthdate = birthdateEl.value.trim();
   if (!isRequired(birthdate)) {
-      showError(birthdateEl, 'Votre date de naissance doit être remplie');
+      showError(birthdateEl, 'Vous devez entrer votre date de naissance.');
   } else if (!isDateValid(birthdate)) {
-      showError(birthdateEl, 'La Date n\'est pas valide')
+      showError(birthdateEl, 'La Date n\'est pas valide.')
   } else {
       showSuccess(birthdateEl);
       valid = true;
@@ -95,17 +95,17 @@ const checkDate = () => {
 };
 
 // quantity
-const isQuantityValid = (quantity) => {
-  const regex = /^\b([0-9]|[1-9][0-9])\b/;
+let isQuantityValid = (quantity) => {
+  let regex = /^\b([0-9]|[1-9][0-9])\b/;
   return regex.test(quantity);
 };
-const checkQty = () => {
+let checkQty = () => {
   let valid = false;
-  const quantity = quantityEl.value.trim();
+  let quantity = quantityEl.value.trim();
   if (!isRequired(quantity)) {
-      showError(quantityEl, 'Vous devez entrer une quantité');
+      showError(quantityEl, 'Vous devez entrer une quantité.');
   } else if (!isQuantityValid(quantity)) {
-      showError(quantityEl, 'Veuillez enter un nombre s\'il vous plait ')
+      showError(quantityEl, 'Veuillez enter un nombre s\'il vous plait.')
   } else {
       showSuccess(quantityEl);
       valid = true;
@@ -114,10 +114,11 @@ const checkQty = () => {
 };
 
 // Check if checkbox is valid
-const isCheckboxValid = () => {
+let isCheckboxValid = () => {
     let valid = false;
     if (!checkboxCGU.checked){
-        showError(checkboxCGU, 'Veuillez accepter les conditions générales');
+        showError(checkboxCGU, 'Vous devez vérifier que vous acceptez les termes et conditions.');
+        valid = false;
     }
     else {
         showSuccess(checkboxCGU);
@@ -127,9 +128,9 @@ const isCheckboxValid = () => {
 };
 
 // check if radios is valid
-const isradiosValid = () => {
+let isradiosValid = () => {
     let valid = false;
-    if (radio1.checked | radio2.checked | radio3.checked | radio4.checked | radio5.checked | radio6.checked){
+    if (radio1.checked || radio2.checked || radio3.checked || radio4.checked || radio5.checked || radio6.checked){
         valid = true;
     }
     else {
@@ -140,20 +141,20 @@ const isradiosValid = () => {
 };
 
 // Presente le message d'erreur
-const showError = (input, message) => {
-    const formField = input.parentElement;
+let showError = (input, message) => {
+    let formField = input.parentElement;
     formField.classList.remove('success');
     formField.classList.add('error');
-    const error = formField.querySelector('small');
+    let error = formField.querySelector('small');
     error.textContent = message;
 };
 
 // Ne presente pas le message d'erreur
-const showSuccess = (input) => {
-    const formField = input.parentElement;
+let showSuccess = (input) => {
+    let formField = input.parentElement;
     formField.classList.remove('error');
     formField.classList.add('success');
-    const error = formField.querySelector('small');
+    let error = formField.querySelector('small');
     error.textContent = '';
 }
 
@@ -180,7 +181,8 @@ form.addEventListener('submit', function (e) {
         isQuantityValid;
     // si le formulaire est valide, envoie un log en console au submit. 
     if (isFormValid) {
-        showThanks();   
+        createUser();
+        showThanks(); 
     }
 });
 
@@ -208,4 +210,23 @@ function showThanks() {
       thanks.style.display = 'none';
       form.style.display = 'block';
     }
+};
+
+
+
+function createUser() {
+    // creation de la classe
+    class User {
+        constructor(firstname, lastname, emailEl, birthdateEl, quantityEl)  {
+            this.firstname = firstname.value,
+            this.lastname = lastname.value,
+            this.email = emailEl.value,
+            this.birthdate = birthdateEl.value,
+            this.quantity = quantityEl.value
+        }
+    }
+    // creation du nouvel utilisateur
+    const newUser = new User(firstname, lastname, email, birthdate, quantity);
+    Array.prototype.push.apply(newUser);
+    console.log(newUser);
 };
