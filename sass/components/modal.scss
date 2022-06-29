@@ -1,6 +1,7 @@
 @use "../utils/fonts" as f;
 @use "../utils/colors" as c;
 @use "../utils/mixins" as m;
+@use "../animations/a-modal" as a;
 
 .modal{
 	display: none;
@@ -18,6 +19,13 @@
 	}
 	&.open{
 		display: block;
+		animation-name: modalopen;
+		animation-duration: var(--modal-duration);
+	}
+	&.hide{
+		animation-name: modalopen;
+		animation-direction: reverse;
+		animation-duration: var(--modal-duration);	
 	}
 	&-content {
 		margin: 5% auto;
@@ -27,8 +35,6 @@
 			max-width: 100%;
 			height:100%;
 		}	
-		animation-name: modalopen;
-		animation-duration: var(--modal-duration);
 		background: c.$grey;
 		border-radius: 10px;
 		overflow: hidden;

@@ -168,8 +168,8 @@ form.addEventListener('submit', function (e) {
         isLastNameValid = checkLastName(),
         isDateValid = checkDate(),
         isQuantityValid = checkQty(),
-        isCheckboxValid = isCheckboxValid(),
-        isradiosValid = isradiosValid();
+        CheckboxValid = isCheckboxValid(),
+        radiosValid = isradiosValid();
         
     // Validation du formulaire    
     let isFormValid = 
@@ -177,8 +177,8 @@ form.addEventListener('submit', function (e) {
         isFirstNameValid && 
         isLastNameValid && 
         isDateValid &&
-        isCheckboxValid &&
-        isradiosValid &&
+        CheckboxValid &&
+        radiosValid &&
         isQuantityValid;
     // si le formulaire est valide, envoie un log en console au submit. 
     if (isFormValid) {
@@ -232,8 +232,6 @@ function showThanks() {
       form.style.display = 'block';
     }
 };
-
-
 
 function createUser() {
     // creation de la classe

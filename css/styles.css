@@ -282,21 +282,21 @@ footer .copyrights {
     animation-duration: 1s;
   }
 
-  .topnav.mobile .topnav-main-navbar {
+  .topnav.show .topnav-main-navbar {
     display: block;
     animation-name: show;
     animation-duration: 1s;
     width: 100%;
   }
 
-  .topnav.mobile .icon {
+  .topnav.show .icon {
     position: absolute;
     right: 0;
     top: 0;
     color: red;
   }
 
-  .topnav.mobile a {
+  .topnav.show a {
     float: none;
     display: block;
     text-align: left;
@@ -374,13 +374,18 @@ footer .copyrights {
 }
 .modal.open {
   display: block;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+}
+.modal.hide {
+  animation-name: modalopen;
+  animation-direction: reverse;
+  animation-duration: var(--modal-duration);
 }
 .modal-content {
   margin: 5% auto;
   width: 100%;
   max-width: 500px;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
   background: #232323;
   border-radius: 10px;
   overflow: hidden;
