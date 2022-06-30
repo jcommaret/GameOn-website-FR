@@ -1,0 +1,65 @@
+.modal{
+  display: none;
+  &.open{
+    display: block;
+		animation: modalopen;
+		animation-duration: 0.2s;
+		animation-timing-function: ease-in-out;
+  }
+  &.hide{
+    display: none;
+		animation: modalhide;
+		animation-duration: 0.2s;
+		animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+		transform: translateY(-150px);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modalhide {
+	from {
+		opacity: 1;
+		}
+	to {
+		transform: translateY(0px);
+		opacity: 0;
+	}
+}
+
+.show .topnav-main-navbar{
+	display:block;
+	animation-name:show;
+	animation-duration:0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+.hide .topnav-main-navbar{
+  animation-name: hide;
+  animation-duration: 1s;
+} 
+
+@keyframes show{
+  from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes hide{
+  from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}

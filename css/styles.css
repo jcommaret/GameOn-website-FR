@@ -49,15 +49,6 @@ main {
   text-align: justify;
 }
 
-@keyframes modalopen {
-  from {
-    opacity: 0;
-    transform: translateY(-150px);
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes show {
   from {
     opacity: 0;
@@ -72,6 +63,7 @@ main {
   }
   to {
     opacity: 0;
+    display: none;
   }
 }
 footer {
@@ -276,16 +268,7 @@ footer .copyrights {
     display: block;
   }
 
-  .topnav > .topnav-main-navbar {
-    display: none;
-    animation-name: hide;
-    animation-duration: 1s;
-  }
-
   .topnav.show .topnav-main-navbar {
-    display: block;
-    animation-name: show;
-    animation-duration: 1s;
     width: 100%;
   }
 
@@ -365,6 +348,7 @@ footer .copyrights {
   width: 100%;
   overflow: auto;
   background-color: #FFF;
+  transition-property: opacity;
 }
 @media screen and (max-width: 768px) {
   .modal {
@@ -374,13 +358,15 @@ footer .copyrights {
 }
 .modal.open {
   display: block;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
+  animation: modalopen;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
 }
-.modal.hide {
-  animation-name: modalopen;
-  animation-direction: reverse;
-  animation-duration: var(--modal-duration);
+.modal .hide {
+  opacity: 0;
+  animation: modalhide;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
 }
 .modal-content {
   margin: 5% auto;
@@ -559,6 +545,78 @@ input {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30vh;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal {
+  display: none;
+}
+.modal.open {
+  display: block;
+  animation: modalopen;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+.modal.hide {
+  display: none;
+  animation: modalhide;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalhide {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
+.show .topnav-main-navbar {
+  display: block;
+  animation-name: show;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
+
+.hide .topnav-main-navbar {
+  animation-name: hide;
+  animation-duration: 1s;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,7 @@
 @use "../utils/fonts" as f;
 @use "../utils/colors" as c;
 @use "../utils/mixins" as m;
+@use "../animations/a-menu" as a;
 
 
 .topnav {
@@ -70,15 +71,8 @@
     float: right;
     display: block;
   }
-	.topnav>.topnav-main-navbar{
-		display:none;
-		animation-name:hide;
-		animation-duration:1s;
-	}
+		
 	.topnav.show .topnav-main-navbar{
-		display: block;
-		animation-name: show;
-		animation-duration: 1s;
 		width: 100%;
 	}
 
@@ -94,5 +88,4 @@
     display: block;
     text-align: left;
   }
-	
 }

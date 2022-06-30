@@ -4,7 +4,6 @@
 @use "../animations/a-modal" as a;
 
 .modal{
-	display: none;
 	position: fixed;
 	z-index: 1;
 	left: 0;
@@ -13,19 +12,22 @@
 	width: 100%;
 	overflow: auto;
 	background-color: c.$white;
+	transition-property:opacity;
 	@include m.m768{
 		top:50px;
 		background-color:transparent;
 	}
-	&.open{
+	&.open {
 		display: block;
-		animation-name: modalopen;
-		animation-duration: var(--modal-duration);
-	}
-	&.hide{
-		animation-name: modalopen;
-		animation-direction: reverse;
-		animation-duration: var(--modal-duration);	
+		animation: modalopen;
+		animation-duration: 0.2s;
+		animation-timing-function: ease-in-out;
+	};
+	.hide{
+		opacity: 0;
+		animation:modalhide;
+		animation-duration:0.2s;
+		animation-timing-function: ease-in-out;
 	}
 	&-content {
 		margin: 5% auto;
@@ -212,5 +214,15 @@ input {
 			margin-right: auto;
 			margin-top: 30vh;
 		}
+	}
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+		transform: translateY(-150px);
+	}
+	to {
+		opacity: 1;
 	}
 }
