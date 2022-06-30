@@ -2,13 +2,13 @@
   display: none;
   &.open{
     display: block;
-		animation: modalopen;
+		animation-name: modalopen;
 		animation-duration: 0.2s;
 		animation-timing-function: ease-in-out;
   }
   &.hide{
     display: none;
-		animation: modalhide;
+		animation-name: modalhide;
 		animation-duration: 0.2s;
 		animation-timing-function: ease-in-out;
   }
