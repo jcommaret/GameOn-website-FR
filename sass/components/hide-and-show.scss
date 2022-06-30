@@ -1,3 +1,5 @@
+@use "../utils/mixins" as m;
+
 .modal{
   display: none;
   &.open{
@@ -41,10 +43,12 @@
   animation-timing-function: ease-in-out;
 }
 
-.hide .topnav-main-navbar{
-  animation-name: hide;
-  animation-duration: 1s;
-} 
+@include m.m768 {
+  .hide .topnav-main-navbar{
+    animation-name: hide;
+    animation-duration: 1s;
+  }  
+}
 
 @keyframes show{
   from {
