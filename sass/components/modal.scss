@@ -17,18 +17,6 @@
 		top:50px;
 		background-color:transparent;
 	}
-	&.open {
-		display: block;
-		animation: modalopen;
-		animation-duration: 0.2s;
-		animation-timing-function: ease-in-out;
-	};
-	.hide{
-		opacity: 0;
-		animation:modalhide;
-		animation-duration:0.2s;
-		animation-timing-function: ease-in-out;
-	}
 	&-content {
 		margin: 5% auto;
 		width: 100%;
@@ -43,7 +31,6 @@
 		position: relative;
 		color: c.$white;
 		padding-top: 10px;
-	
 	}
 	&-body{
 		padding: 15px 8%;
@@ -214,15 +201,5 @@ input {
 			margin-right: auto;
 			margin-top: 30vh;
 		}
-	}
-}
-
-@keyframes modalopen {
-	from {
-		opacity: 0;
-		transform: translateY(-150px);
-	}
-	to {
-		opacity: 1;
 	}
 }
