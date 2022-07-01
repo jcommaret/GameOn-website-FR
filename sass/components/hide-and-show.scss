@@ -1,7 +1,6 @@
 @use "../utils/mixins" as m;
 
 .modal{
-  display: none;
   &.open{
     display: block;
 		animation-name: modalopen;
@@ -11,7 +10,7 @@
   &.hide{
     display: none;
 		animation-name: modalhide;
-		animation-duration: 0.2s;
+		animation-duration: 5s;
 		animation-timing-function: ease-in-out;
   }
 }

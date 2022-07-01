@@ -329,6 +329,7 @@ footer .copyrights {
   height: 100%;
   width: 100%;
   overflow: auto;
+  opacity: 1;
   background-color: #FFF;
   transition-property: opacity;
 }
@@ -517,9 +518,6 @@ input {
   margin-top: 30vh;
 }
 
-.modal {
-  display: none;
-}
 .modal.open {
   display: block;
   animation-name: modalopen;
@@ -529,7 +527,7 @@ input {
 .modal.hide {
   display: none;
   animation-name: modalhide;
-  animation-duration: 0.2s;
+  animation-duration: 5s;
   animation-timing-function: ease-in-out;
 }
 
