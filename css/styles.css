@@ -499,6 +499,11 @@ input {
   color: #FE142F;
 }
 
+.center-flex {
+  display: flex;
+  justify-content: center;
+}
+
 #thanks {
   display: none;
 }
