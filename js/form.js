@@ -180,7 +180,7 @@ form.addEventListener('submit', function (e) {
         CheckboxValid &&
         radiosValid &&
         isQuantityValid;
-    // si le formulaire est valide, envoie un log en console au submit. 
+    // si le formulaire est valide, crée un utilisateur, et présente le message de remerciement. 
     if (isFormValid) {
         createUser();
         showThanks(); 
@@ -219,6 +219,31 @@ form.addEventListener('input',function (e) {
             break;          
     }
 });
+
+function createUser() {
+    // creation de la classe
+    class User {
+        constructor(firstname, lastname, emailEl, birthdateEl, quantityEl, radio1, radio2, radio3, radio4, radio5, radio6)  {
+            this.firstname = firstname.value,
+            this.lastname = lastname.value,
+            this.email = emailEl.value,
+            this.birthdate = birthdateEl.value,
+            this.quantity = quantityEl.value, 
+            this.radio1 = [radio1.value, radio1.checked],
+            this.radio2 = [radio2.value, radio2.checked],
+            this.radio3 = [radio3.value, radio3.checked],
+            this.radio4 = [radio4.value, radio4.checked],
+            this.radio5 = [radio5.value, radio5.checked],
+            this.radio6 = [radio6.value, radio6.checked]
+        }
+    }
+    // creation du nouvel utilisateur
+    const newUser = new User(firstname, lastname, email, birthdate, quantity, radio1, radio2, radio3, radio4, radio5, radio6 );
+    Array.prototype.push.apply(newUser);
+    // console.log(newUser);
+};
+
+
 // Présente le message de remerciement.
 function showThanks() {
     var thanks = document.getElementById("thanks");
@@ -231,21 +256,4 @@ function showThanks() {
       thanks.style.display = 'none';
       form.style.display = 'block';
     }
-};
-
-function createUser() {
-    // creation de la classe
-    class User {
-        constructor(firstname, lastname, emailEl, birthdateEl, quantityEl)  {
-            this.firstname = firstname.value,
-            this.lastname = lastname.value,
-            this.email = emailEl.value,
-            this.birthdate = birthdateEl.value,
-            this.quantity = quantityEl.value
-        }
-    }
-    // creation du nouvel utilisateur
-    const newUser = new User(firstname, lastname, email, birthdate, quantity);
-    Array.prototype.push.apply(newUser);
-    console.log(newUser);
 };
