@@ -12,7 +12,7 @@
     <div id="myTopnav" class="topnav hide">
       <!--Logo-->
       <div class="topnav-header-logo">
-        <img alt="logo" src="img/logo.png" width="auto" height="auto" />
+        <img alt="logo" src="img/logo.png" />
       </div>
       <!--Menu Opener-->
       <a href="javascript:void(0);" class="icon" onclick="Nav()"><i class="fa fa-bars"></i></a>
@@ -60,14 +60,14 @@
         <div class="modal-body">
           <form id="signup" name="reservation">
             <div class="formData">
-              <label>Prénom</label><br>
-              <input class="text-control" type="text" id="firstname" name="first"/><br>
+              <label for="firstname">Prénom</label><br>
+              <input class="text-control" type="text" id="firstname" name="firstname"/><br>
               <small></small>
             </div>
             
             <div class="formData">
-              <label for="last">Nom</label><br>
-              <input class="text-control" type="text" id="lastname" name="last"/><br>
+              <label for="lastname">Nom</label><br>
+              <input class="text-control" type="text" id="lastname" name="lastname"/><br>
               <small></small>
             </div>
             <div class="formData">
@@ -140,7 +140,7 @@
           <div id="thanks">
             <div class="thanks-modal">
               <p>Merci pour votre inscription</p>
-              <input class="btn btn-submit modal-toogle" type="close" value="Fermer">
+              <input class="btn btn-submit modal-toogle" value="Fermer">
             </div>
           </div>
         </div>
