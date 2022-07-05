@@ -361,6 +361,19 @@ footer .copyrights {
   padding: 15px 8%;
   margin: 15px auto;
 }
+.modal.hide {
+  display: block;
+  animation-name: modalhide;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.modal.open {
+  display: block;
+  animation-name: modalopen;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-in-out;
+}
 
 label {
   font-family: "DM Sans", sans-serif;
@@ -524,18 +537,6 @@ input {
   margin-top: 30vh;
 }
 
-.modal.open {
-  display: block;
-  animation-name: modalopen;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;
-}
-.modal.hide {
-  animation-name: modalhide;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
-}
-
 @keyframes modalopen {
   from {
     opacity: 0;
@@ -546,13 +547,50 @@ input {
   }
 }
 @keyframes modalhide {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  90% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
     opacity: 0;
   }
 }
+/*.modal{
+  &.open{
+    display: block;
+		animation-name: modalopen;
+		animation-duration: 0.2s;
+		animation-timing-function: ease-in-out;
+  }
+  &.hide{
+		animation-name: modalhide;
+		animation-duration: 0.2s;
+		animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes modalopen {
+	from {
+		opacity: 0;
+		transform: translateY(-150px);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes modalhide {
+	from {
+		opacity: 1;
+		}
+	to {
+		opacity: 0;
+	}
+}
+*/
 .show .topnav-main-navbar {
   display: block;
   animation-name: show;
