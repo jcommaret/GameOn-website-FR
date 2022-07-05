@@ -17,16 +17,18 @@ function Modal() {
     {
       modal.className= "modal hide"; 
       setTimeout(()=>{
-        
         modal.style.display = 'none';
-      },500)
+      },200)
     }
 }
 
 // Close modal if keyup on escape
 document.addEventListener('keyup', function(event){
 	if(event.key === "Escape"){
-		modal.className = "modal";
+		modal.className = "modal hide";
+    setTimeout(()=>{
+      modal.style.display = 'none';
+    },200)
 	}
 });
 

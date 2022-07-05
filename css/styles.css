@@ -532,7 +532,7 @@ input {
 }
 .modal.hide {
   animation-name: modalhide;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in-out;
 }
 
