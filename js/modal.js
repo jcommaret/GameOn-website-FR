@@ -7,18 +7,12 @@ modalBtn.forEach((btn) => btn.addEventListener("click", Modal));
 
 // Modal function : check if modal has class open and add it if not, remove it if this is the case 
 function Modal() {
-  // si la modal est strictement egale a modal, ajouter la classe open
-  if (modal.className === "modal hide") 
-      {
-        modal.className = "modal open";
-        modal.style.display = 'block';
-      } 
-  else 
-    {
-      modal.className= "modal hide"; 
-      setTimeout(()=>{
-        modal.style.display = 'none';
-      },500)
+  if (!modal.classList.contains("open")){
+    modal.classList.remove("hide");
+    modal.classList.add("open");
+    }
+    else{
+      modal.classList.replace("open","hide");
     }
 }
 
