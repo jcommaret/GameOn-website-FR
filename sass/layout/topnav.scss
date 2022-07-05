@@ -3,89 +3,20 @@
 @use "../utils/mixins" as m;
 @use "../animations/a-menu" as a;
 
-
-.topnav {
-	overflow: hidden;
-	margin: 3.5%;
-	@include m.m768{
-		position:relative;
-		.topnav-main-navbar {
-			display:none;
+.topnav{
+	display:flex;
+	justify-content: space-between;
+	a.icon{
+		display:none;
+		@include m.m768{
+			display:block;
 		}
 	}
-	a {
-		float: left;
-		display: block;
-		color: c.$black;
-		text-align: center;
-		padding: 12px 12px;
-		margin: 5px;
-		text-decoration: none;
-		font-size: 20px;
-		font-family: f.$roboto;
-		@include m.m540{
+	@include m.m768{
+		&-menu{
 			display: none;
 		}
-		@include m.m768{
-			display:none;
-		}
-		&:hover {
-			background-color: c.$topnav-red;
-			color: c.$white;
-			border-radius: 15px;
-			&.icon{
-				color: c.$white;		
-			}
-		}
-		@include m.m540{
-			.icon{
-				color: c.$red;
-				float: right;
-				display: block;
-			}
-		}
 	}
-	&.active{
-		background-color: c.$topnav-red;
-		color: c.$white;
-		border-radius: 15px;
-	}
-	.icon {
-		display: none;
-	}
-	&-header-logo{
-		float:left;
-	}
-	&-main-navbar{
-		float:right;
-		@include m.m768{
-			display:none;
-		}
-	}
-	
-}
-
-@include m.m768 {
-  .topnav a.icon {
-		color: c.$red;
-    float: right;
-    display: block;
-  }
-		
-	.topnav.show .topnav-main-navbar{
-		width: 100%;
-	}
-
-  .topnav.show .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-		color: red;
-  }
-	
-  .topnav.show a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+	align-items: center;
+  height: 90px;
 }

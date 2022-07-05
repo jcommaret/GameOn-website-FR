@@ -177,97 +177,25 @@ footer .copyrights {
 }
 
 .topnav {
-  overflow: hidden;
-  margin: 3.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
 }
-@media screen and (max-width: 768px) {
-  .topnav {
-    position: relative;
-  }
-  .topnav .topnav-main-navbar {
-    display: none;
-  }
-}
-.topnav a {
-  float: left;
-  display: block;
-  color: #000;
-  text-align: center;
-  padding: 12px 12px;
-  margin: 5px;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: "Roboto", serif;
-}
-@media screen and (max-width: 540px) {
-  .topnav a {
-    display: none;
-  }
-}
-@media screen and (max-width: 768px) {
-  .topnav a {
-    display: none;
-  }
-}
-.topnav a:hover {
-  background-color: #ff0000;
-  color: #FFF;
-  border-radius: 15px;
-}
-.topnav a:hover.icon {
-  color: #FFF;
-}
-@media screen and (max-width: 540px) {
-  .topnav a .icon {
-    color: #FE142F;
-    float: right;
-    display: block;
-  }
-}
-.topnav.active {
-  background-color: #ff0000;
-  color: #FFF;
-  border-radius: 15px;
-}
-.topnav .icon {
+.topnav a.icon {
   display: none;
 }
-.topnav-header-logo {
-  float: left;
-}
-.topnav-main-navbar {
-  float: right;
+@media screen and (max-width: 768px) {
+  .topnav a.icon {
+    display: block;
+  }
 }
 @media screen and (max-width: 768px) {
-  .topnav-main-navbar {
+  .topnav-menu {
     display: none;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .topnav a.icon {
-    color: #FE142F;
-    float: right;
-    display: block;
-  }
-
-  .topnav.show .topnav-main-navbar {
-    width: 100%;
-  }
-
-  .topnav.show .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    color: red;
-  }
-
-  .topnav.show a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
 .btn {
   background: #FE142F;
   color: #FFF;
@@ -556,69 +484,6 @@ input {
     display: none;
     opacity: 0;
     z-index: -1;
-  }
-}
-/*.modal{
-  &.open{
-    display: block;
-		animation-name: modalopen;
-		animation-duration: 0.2s;
-		animation-timing-function: ease-in-out;
-  }
-  &.hide{
-		animation-name: modalhide;
-		animation-duration: 0.2s;
-		animation-timing-function: ease-in-out;
-  }
-}
-
-@keyframes modalopen {
-	from {
-		opacity: 0;
-		transform: translateY(-150px);
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes modalhide {
-	from {
-		opacity: 1;
-		}
-	to {
-		opacity: 0;
-	}
-}
-*/
-.show .topnav-main-navbar {
-  display: block;
-  animation-name: show;
-  animation-duration: 0.2s;
-  animation-timing-function: ease-in-out;
-}
-
-@media screen and (max-width: 768px) {
-  .hide .topnav-main-navbar {
-    animation-name: hide;
-    animation-duration: 0.2s;
-    animation-timing-function: ease-in-out;
-  }
-}
-@keyframes show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes hide {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 

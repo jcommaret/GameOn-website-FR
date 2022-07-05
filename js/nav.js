@@ -1,9 +1,11 @@
-const x = document.getElementById("myTopnav");
+const x = document.querySelector(".topnav-menu");
   
 function Nav() {
-  if (x.className === "topnav hide") {
-    x.className = "topnav show";
-  } else {
-    x.className = "topnav hide";
-  }
+  if (!x.classList.contains("open")){
+    x.classList.remove("hide");
+    x.classList.add("open");
+    }
+    else{
+      x.classList.replace("open","hide");
+    }
 }

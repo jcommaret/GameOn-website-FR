@@ -10,6 +10,7 @@ function Modal() {
   if (!modal.classList.contains("open")){
     modal.classList.remove("hide");
     modal.classList.add("open");
+    window.scrollTo(0, 0);
     }
     else{
       modal.classList.replace("open","hide");
