@@ -11,10 +11,15 @@ function Modal() {
   if (modal.className === "modal hide") 
       {
         modal.className = "modal open";
+        modal.style.display = 'block';
       } 
   else 
     {
-      modal.className = "modal hide";
+      modal.className= "modal hide"; 
+      setTimeout(()=>{
+        
+        modal.style.display = 'none';
+      },500)
     }
 }
 

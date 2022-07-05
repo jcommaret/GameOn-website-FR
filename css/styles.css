@@ -322,6 +322,7 @@ footer .copyrights {
 }
 
 .modal {
+  display: none;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -530,9 +531,8 @@ input {
   animation-timing-function: ease-in-out;
 }
 .modal.hide {
-  display: none;
   animation-name: modalhide;
-  animation-duration: 5s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
 }
 
@@ -550,7 +550,6 @@ input {
     opacity: 1;
   }
   to {
-    transform: translateY(0px);
     opacity: 0;
   }
 }
