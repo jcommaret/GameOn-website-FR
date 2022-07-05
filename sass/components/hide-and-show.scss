@@ -43,7 +43,8 @@
 @include m.m768 {
   .hide .topnav-main-navbar{
     animation-name: hide;
-    animation-duration: 1s;
+		animation-duration: 0.2s;
+		animation-timing-function: ease-in-out;
   }  
 }
 
