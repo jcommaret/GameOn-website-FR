@@ -18,7 +18,7 @@ function Modal() {
       modal.className= "modal hide"; 
       setTimeout(()=>{
         modal.style.display = 'none';
-      },200)
+      },500)
     }
 }
 
