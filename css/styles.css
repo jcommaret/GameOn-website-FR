@@ -331,7 +331,6 @@ footer .copyrights {
   width: 100%;
   overflow: auto;
   opacity: 1;
-  background-color: #FFF;
   transition-property: opacity;
 }
 @media screen and (max-width: 768px) {
@@ -364,14 +363,14 @@ footer .copyrights {
 .modal.hide {
   display: block;
   animation-name: modalhide;
-  animation-duration: 0.2s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
 }
 .modal.open {
   display: block;
   animation-name: modalopen;
-  animation-duration: 0.2s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
 }
 
@@ -556,6 +555,7 @@ input {
   100% {
     display: none;
     opacity: 0;
+    z-index: -1;
   }
 }
 /*.modal{

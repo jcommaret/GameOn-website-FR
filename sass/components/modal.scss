@@ -13,7 +13,6 @@
 	width: 100%;
 	overflow: auto;
 	opacity:1;
-	background-color: c.$white;
 	transition-property:opacity;
 	@include m.m768{
 		top:50px;
@@ -41,14 +40,14 @@
 	&.hide{
 		display:block;
 		animation-name: modalhide;
-		animation-duration: 0.2s;
+		animation-duration: 0.5s;
 		animation-timing-function: ease-in-out;
 		animation-fill-mode: forwards;
 	}
 	&.open{
 		display: block;
 		animation-name: modalopen;
-		animation-duration: 0.2s;
+		animation-duration: 0.5s;
 		animation-timing-function: ease-in-out;
 	}
 }
@@ -243,5 +242,6 @@ input {
 	100% {
 		display:none;
 		opacity: 0;
+		z-index:-1;
 	}
 }
