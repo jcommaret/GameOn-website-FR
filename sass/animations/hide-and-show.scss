@@ -1,0 +1,23 @@
+@keyframes open {
+	from {
+		opacity: 0;
+		transform: translateY(-150px);
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+		}
+	90% {
+		opacity: 0;
+	}
+	100% {
+		display:none;
+		opacity: 0;
+		z-index:-1;
+	}
+}

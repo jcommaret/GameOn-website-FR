@@ -1,19 +1,23 @@
 @use "breakpoints" as b;
 
-@mixin m540 {
-    @media screen and (max-width: map-get(b.$breakpoints, max-540)){
+@mixin mdesktop {
+    @media screen and (max-width: map-get(b.$breakpoints, mdesktop)){
         @content;
     }
 }
 
-@mixin m768 {
-    @media screen and (max-width: map-get(b.$breakpoints, max-768)){
-        @content;
+@mixin hideandshow{
+    &.hide{
+        display:block;
+        animation-name: hide;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
     }
-}
-
-@mixin m800 {
-    @media screen and (max-width: map-get(b.$breakpoints, max-800)){
-        @content;
+    &.open{
+        display: block;
+        animation-name: open;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
     }
 }

@@ -1,12 +1,11 @@
 @use "../utils/fonts" as f;
 @use "../utils/colors" as c;
 @use "../utils/mixins" as m;
-@use "../animations/a-modal" as a;
 
 .modal{
 	display:none;
 	position: fixed;
-	z-index: 1;
+	z-index: 3000;
 	left: 0;
 	top: 0;
 	height: 100%;
@@ -14,15 +13,15 @@
 	overflow: auto;
 	opacity:1;
 	transition-property:opacity;
-	@include m.m768{
-		top:50px;
+	@include m.mdesktop{
+		top:90px;
 		background-color:transparent;
 	}
 	&-content {
-		margin: 5% auto;
+		margin: auto;
 		width: 100%;
 		max-width: 500px;
-		@include m.m768 {
+		@include m.mdesktop {
 			max-width: 100%;
 			height:100%;
 		}	
@@ -37,19 +36,7 @@
 		padding: 15px 8%;
 		margin: 15px auto;
 	}
-	&.hide{
-		display:block;
-		animation-name: modalhide;
-		animation-duration: 0.5s;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: forwards;
-	}
-	&.open{
-		display: block;
-		animation-name: modalopen;
-		animation-duration: 0.5s;
-		animation-timing-function: ease-in-out;
-	}
+	@include m.hideandshow;
 }
 
 label {
@@ -222,26 +209,3 @@ input {
 	}
 }
 
-@keyframes modalopen {
-	from {
-		opacity: 0;
-		transform: translateY(-150px);
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-@keyframes modalhide {
-	0% {
-		opacity: 1;
-		}
-	90% {
-		opacity: 0;
-	}
-	100% {
-		display:none;
-		opacity: 0;
-		z-index:-1;
-	}
-}

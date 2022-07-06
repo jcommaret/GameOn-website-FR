@@ -4,20 +4,21 @@
 
 .hero{
   &-section{
-    min-height: 93vh;
-    border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
-    @include m.m800{
+    @include m.mdesktop{
+      margin-top: 90px;
       display: block;
 		  box-shadow: unset;
+      overflow:visible;
     }
     > .btn-signup {
       display: none;
-      @include m.m800{
+      @include m.mdesktop{
         display: block;
 			  margin: 32px auto 10px;
 			  padding: 12px 35px;
@@ -32,7 +33,7 @@
     position: relative;
     text-align: left;
     min-width: 424px;
-    @include m.m800{
+    @include m.mdesktop{
       background: c.$white;
       color: c.$black;
       padding: 20px;  
@@ -45,7 +46,7 @@
         position: absolute;
         right: -80px;
         top: 0;
-        @include m.m800 {
+        @include m.mdesktop {
           content: unset;
         }
     }
@@ -54,7 +55,7 @@
       position: relative;
       z-index: 1;
     }
-    @include m.m800{
+    @include m.mdesktop{
       .btn-signup {
         display: none;
       }
@@ -64,7 +65,7 @@
     font-size: 6rem;
     font-weight: normal;
     white-space: nowrap;
-    @include m.m800{
+    @include m.mdesktop{
       font-size: 4.5rem;
       white-space: normal;
     }
@@ -74,7 +75,7 @@
     font-weight: normal;
     margin-top: 57px;
     padding: 0;
-    @include m.m800{
+    @include m.mdesktop{
       width: unset;
       font-size: 1.5rem;
     }
@@ -86,7 +87,7 @@
       height: 100%;
       display: block;
       padding: 0;    
-      @include m.m800{
+      @include m.mdesktop{
         border-radius: 10px;
         margin-top: 40px;
       }

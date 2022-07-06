@@ -1,11 +1,11 @@
-const x = document.querySelector(".topnav-menu");
+const menu = document.querySelector(".topnav-menu");
   
 function Nav() {
-  if (!x.classList.contains("open")){
-    x.classList.remove("hide");
-    x.classList.add("open");
+  if (!menu.classList.contains("open")){
+    menu.classList.remove("hide");
+    menu.classList.add("open");
     }
     else{
-      x.classList.replace("open","hide");
+      menu.classList.replace("open","hide");
     }
 }

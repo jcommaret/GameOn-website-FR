@@ -17,7 +17,7 @@ footer {
 		font-size: 1rem;
 		margin: 60px 0 30px;
 		font-weight: bolder;
-		@include m.m800{
+		@include m.mdesktop{
 			margin-top: 50px;
 			text-align: center;
 		}

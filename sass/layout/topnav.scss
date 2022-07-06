@@ -1,22 +1,92 @@
 @use "../utils/fonts" as f;
 @use "../utils/colors" as c;
 @use "../utils/mixins" as m;
-@use "../animations/a-menu" as a;
 
 .topnav{
 	display:flex;
 	justify-content: space-between;
-	a.icon{
-		display:none;
-		@include m.m768{
-			display:block;
-		}
-	}
-	@include m.m768{
-		&-menu{
-			display: none;
-		}
-	}
+	flex-direction: row;
 	align-items: center;
-  height: 90px;
+  height: 180px;
+	padding-left: 35px;
+  padding-right: 35px;
+	@include m.mdesktop{
+		width: 100%;
+		height:90px;
+		position: fixed;
+		z-index:1000;
+		background-color: #FFF;
+	}
+	&-menu{
+		a{
+			color:c.$black;
+			padding:8px 11px;
+			text-decoration: none;
+			border-radius: 8px;
+			&:hover, &.active{
+				text-decoration: underline;
+				background-color: c.$red;
+				color:c.$white;
+			}
+		}
+		
+		@include m.mdesktop{
+			flex-direction: column;
+			display:none;
+			&.open{
+				z-index:1000;
+				position: fixed;
+				top: 90px;
+				width: calc(100% - 70px);
+				background-color: c.$white;
+				a{
+					padding:8px;
+					border-radius:8px;
+					display:flex;
+					justify-content: center;
+					color:c.$red;
+					text-decoration: none;
+					&:hover, &.active{
+						color:c.$white;
+						background-color: c.$red;
+					}
+				}
+			}
+			&.hide{
+				z-index:1000;
+				position: fixed;
+				top: 90px;
+				width: calc(100% - 60px);
+				background-color: c.$white;
+				a{
+					padding:8px;
+					border-radius:8px;
+					display:flex;
+					justify-content: center;
+					color:c.$red;
+					text-decoration: none;
+					&:hover{
+						color:c.$white;
+						background-color: c.$red;
+					}
+				}
+			}
+			@include m.hideandshow;
+		}
+	}
+	a.icon{
+		color:c.$red;
+		padding:8px;
+		border-radius:8px;
+		&:hover{
+			background-color: c.$red;
+			color:#FFF;
+
+		}
+		display:none;
+		@include m.mdesktop{
+			display:block;
+
+		}
+	}	
 }
