@@ -10,7 +10,8 @@ function Modal() {
   if (!modal.classList.contains("open")){
     modal.classList.remove("hide");
     modal.classList.add("open");
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
+      initForm();
     }
     else{
       modal.classList.replace("open","hide");
@@ -27,3 +28,14 @@ document.addEventListener('keyup', function(event){
 	}
 });
 
+function initForm(){
+  var thanks = document.getElementById("thanks");
+  var form = document.getElementById("signup");
+  thanks.style.display = 'none';
+  form.style.display = 'block';
+  form.reset();
+  form.querySelectorAll("input").forEach(e => { 
+    e.parentElement.classList.remove("success");
+  });  
+  ;
+};

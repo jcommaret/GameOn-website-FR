@@ -238,7 +238,7 @@ footer .copyrights {
     position: fixed;
     top: 90px;
     width: calc(100% - 70px);
-    background-color: #FFF;
+    background-color: rgba(0, 0, 255, 0.4);
   }
   .topnav-menu.open a {
     padding: 8px;

@@ -248,7 +248,7 @@ function createUser() {
 function showThanks() {
     var thanks = document.getElementById("thanks");
     var form = document.getElementById("signup");
-    if (thanks.style.display == '') {
+    if (thanks.style.display === 'none') {
       thanks.style.display = 'block';
       form.style.display = 'none';
     }
@@ -257,3 +257,5 @@ function showThanks() {
       form.style.display = 'block';
     }
 };
+
+
