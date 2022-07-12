@@ -238,14 +238,15 @@ footer .copyrights {
     position: fixed;
     top: 90px;
     width: calc(100% - 70px);
-    background-color: rgba(0, 0, 255, 0.4);
+    border-radius: 10px;
+    background-color: rgba(255, 0, 0, 0.5);
   }
   .topnav-menu.open a {
     padding: 8px;
     border-radius: 8px;
     display: flex;
     justify-content: center;
-    color: #FE142F;
+    color: #FFF;
     text-decoration: none;
   }
   .topnav-menu.open a:hover, .topnav-menu.open a.active {
@@ -358,8 +359,8 @@ footer .copyrights {
   display: none;
   position: fixed;
   z-index: 3000;
-  left: 0;
-  top: 0;
+  left: 0px;
+  top: 150px;
   height: 100%;
   width: 100%;
   overflow: auto;

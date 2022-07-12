@@ -38,13 +38,14 @@
 				position: fixed;
 				top: 90px;
 				width: calc(100% - 70px);
-				background-color: rgba(0, 0, 255, 0.4);
+				border-radius: 10px;
+				background-color: rgba(255, 0, 0, 0.5);
 				a{
 					padding:8px;
 					border-radius:8px;
 					display:flex;
 					justify-content: center;
-					color:c.$red;
+					color:c.$white;
 					text-decoration: none;
 					&:hover, &.active{
 						color:c.$white;
